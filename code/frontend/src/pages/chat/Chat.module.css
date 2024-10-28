@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #FFFFFF 57.29%, #EEF6FE 100%);
+    background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #FFFFFF 57.29%, #022f67 100%);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
     overflow-y: auto;
@@ -94,8 +94,8 @@
 }
 
 .chatIcon {
-    height: 62px;
-    width: 62px;
+    height: 72px;
+
 }
 
 .chatMessageStream {
@@ -302,7 +302,8 @@
     height: 48px;
 }
 
-.MobileChatContainer {
+.Mobile
+tainer {
     @media screen and (max-width: 600px) {
         max-width: 100%;
         margin: 0 auto;

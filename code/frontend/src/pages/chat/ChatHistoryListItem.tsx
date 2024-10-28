@@ -281,16 +281,6 @@ export const ChatHistoryListItemCell: React.FC<
                 <IconButton
                   className={styles.itemButton}
                   disabled={isButtonDisabled}
-                  iconProps={{ iconName: "Delete" }}
-                  title="Delete"
-                  onClick={onClickDelete}
-                  onKeyDown={(e) =>
-                    e.key === " " ? toggleDeleteDialog() : null
-                  }
-                />
-                <IconButton
-                  className={styles.itemButton}
-                  disabled={isButtonDisabled}
                   iconProps={{ iconName: "Edit" }}
                   title="Edit"
                   onClick={onEdit}

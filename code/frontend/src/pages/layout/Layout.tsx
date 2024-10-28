@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Azure from "../../assets/Azure.svg";
+import Azure from "../../assets/mmp.png";
 import {
   CopyRegular,
   ShareRegular,
@@ -89,7 +89,7 @@ const Layout = ({ children,toggleSpinner, ...props }: LayoutProps) => {
               alt="Chat with your data"
             />
             <Link to="/" className={styles.headerTitleContainer}>
-              <h3 className={styles.headerTitle}>Chat with your data</h3>
+              <h3 className={styles.headerTitle}>MMP Construction - BOBGPT</h3>
             </Link>
             <Stack horizontal className={styles.layoutRightButtons}>
               {!showAuthMessage && showHistoryBtn && (
@@ -98,19 +98,6 @@ const Layout = ({ children,toggleSpinner, ...props }: LayoutProps) => {
                   text={`${showHistoryPanel ? "Hide" : "Show"} Chat History`}
                 />
               )}
-              <div
-                className={styles.shareButtonContainer}
-                role="button"
-                tabIndex={0}
-                aria-label="Share"
-                onClick={handleShareClick}
-                onKeyDown={(e) =>
-                  e.key === "Enter" || e.key === " " ? handleShareClick() : null
-                }
-              >
-                <ShareRegular className={styles.shareButton} />
-                <span className={styles.shareButtonText}>Share</span>
-              </div>
             </Stack>
           </Stack>
         </div>

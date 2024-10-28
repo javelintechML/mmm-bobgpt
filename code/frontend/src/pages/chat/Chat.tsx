@@ -30,7 +30,7 @@ import rehypeRaw from "rehype-raw";
 import { v4 as uuidv4 } from "uuid";
 
 import styles from "./Chat.module.css";
-import Azure from "../../assets/Azure.svg";
+import Azure from "../../assets/logo.png";
 import { multiLingualSpeechRecognizer } from "../../util/SpeechToText";
 import { useBoolean } from "@fluentui/react-hooks";
 import {
@@ -721,23 +721,6 @@ const Chat = () => {
                   </span>
                 </Stack>
               )}
-              <BroomRegular
-                className={`${styles.clearChatBroom} ${styles.mobileclearChatBroom}`}
-                style={{
-                  background:
-                    isLoading || answers.length === 0
-                      ? "#BDBDBD"
-                      : "radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)",
-                  cursor: isLoading || answers.length === 0 ? "" : "pointer",
-                }}
-                onClick={clearChat}
-                onKeyDown={(e) =>
-                  e.key === "Enter" || e.key === " " ? clearChat() : null
-                }
-                aria-label="Clear session"
-                role="button"
-                tabIndex={0}
-              />
               <QuestionInput
                 clearOnSend
                 placeholder="Type a new question..."
@@ -830,25 +813,6 @@ const Chat = () => {
                   horizontal
                   className={styles.historyPanelTopRightButtons}
                 >
-                  <Stack horizontal>
-                    <CommandBarButton
-                      iconProps={{ iconName: "More" }}
-                      title={"Clear all chat history"}
-                      onClick={onShowContextualMenu}
-                      aria-label={"clear all chat history"}
-                      styles={commandBarStyle}
-                      role="button"
-                      id="moreButton"
-                    />
-                    <ContextualMenu
-                      items={menuItems}
-                      hidden={!showContextualMenu}
-                      target={"#moreButton"}
-                      onItemClick={toggleClearAllDialog}
-                      onDismiss={onHideContextualMenu}
-                    />
-                  </Stack>
-
                   <Stack horizontal>
                     <CommandBarButton
                       iconProps={{ iconName: "Cancel" }}
